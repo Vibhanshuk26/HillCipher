@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hill-cipher</title>
+    <style>
+         @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+    list-style: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body{
+    background: #f5f6fa;
+}
+
+.wrapper .sidebar{
+    background: rgb(5, 68, 104);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 225px;
+    height: 100%;
+    padding: 20px 0;
+    transition: all 0.5s ease;
+}
+.wrapper .sidebar ul li a{
+    display: block;
+    padding: 13px 30px;
+    border-bottom: 1px solid #10558d;
+    color: rgb(241, 237, 237);
+    font-size: 16px;
+    position: relative;
+}
+
+.wrapper .sidebar ul li a .icon{
+    color: #dee4ec;
+    width: 30px;
+    display: inline-block;
+}
+.wrapper .sidebar ul li a:hover,
+.wrapper .sidebar ul li a.active{
+    color: #0c7db1;
+
+    background:white;
+    border-right: 2px solid rgb(5, 68, 104);
+}
+
+.wrapper .sidebar ul li a:hover .icon,
+.wrapper .sidebar ul li a.active .icon{
+    color: #0c7db1;
+}
+
+.wrapper .sidebar ul li a:hover:before,
+.wrapper .sidebar ul li a.active:before{
+    display: block;
+}
+.section{
+    margin-left: 350px;
+    margin-top: 70px;
+    font-size: 16px;
+}
+.section h3{
+    font-size: 22px;
+}
+.button {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: rgb(5, 68, 104); 
+  color: black; 
+  border: 2px solid rgb(5, 68, 104);
+  padding: 8px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  margin-top: 30px;
+  margin-left: 800px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.button:hover {
+  background-color: #6dbbdf;
+}
+.button.a:link, a:visited {
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+    </style>
+</head>
+<body>
+
+    <div class="wrapper">
+        <div class="sidebar">
+           <ul>
+            <li>
+                <a href="home.html">
+                    <span class="icon"><i class="fas fa-home"></i></span>
+                    <span class="item">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="aim.html">
+                    <span class="icon"><i class="fas fa-desktop"></i></span>
+                    <span class="item">Aim</span>
+                </a>
+            </li>
+            <li>
+                <a href="theory.html">
+                    <span class="icon"><i class="fas fa-file-alt"></i></span>
+                    <span class="item">Theory</span>
+                </a>
+            </li>
+            <li>
+                <a href="procedure.html">
+                    <span class="icon"><i class="fas fa-bars"></i></span>
+                    <span class="item">Procedure</span>
+                </a>
+            </li>
+            <li>
+                <a href="simulation.html">
+                    <span class="icon"><i class="fas fa-cog"></i></span>
+                    <span class="item">Simulation</span>
+                </a>
+            </li>
+            <li>
+                <a href="applications.html">
+                    <span class="icon"><i class="fas fa-user-friends"></i></span>
+                    <span class="item">Applications</span>
+                </a>
+            </li>
+            <li>
+                <a href="assignment.html" class="active">
+                    <span class="icon"><i class="fas fa-code"></i></span>
+                    <span class="item">Assignment</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+        </div>
+        <div class="section">
+            <h3>Hill Cipher Questions and Answers</h3><br><br>
+            <p>1. Hill cipher requires prerequisite knowledge of?<br>
+                <input type="radio"> integration<br>
+                <input type="radio"> differentiation<br>
+                <input type="radio"> matrix algebra<br>
+                <input type="radio"> differential equation</p><br>
+            <p>2. Hill cipher is an example of _______<br>
+                <input type="radio"> mono-alphabetic cipher<br>
+                <input type="radio"> substitution cipher<br>
+                <input type="radio"> transposition cipher<br>
+                <input type="radio"> additive cipher</p><br>
+            <p>3. Encryption in hill cipher is done using _______<br>
+                <input type="radio"> matrix multiplication<br>
+                <input type="radio"> a 5x5 table<br>
+                <input type="radio"> vigenere table<br>
+                <input type="radio"> matrix inversion</p><br>
+            <p>4. What is poly graphic substitution cipher?<br>
+                <input type="radio"> a substitution based cipher which uses multiple substitutions at different positions<br>
+                <input type="radio"> a substitution based cipher which uses fixed substitution over entire plain text<br>
+                <input type="radio"> a substitution based cipher in which substitution is performed over a block of letters<br>
+                <input type="radio"> a transposition based cipher which uses fixed substitution over entire plain text</p><br>
+            <p>5. A key matrix used for encryption in hill cipher must be?<br>
+                <input type="radio"> invertible matrix<br>
+                <input type="radio"> non invertible matrix<br>
+                <input type="radio"> square matrix<br>
+                <input type="radio"> rectangular matrix</p><br>
+            <p>6. What will be the ciphered text if the plain text “SAN” is encrypted using hill cipher with keyword as “GYBNQKURP”?<br>
+                <input type="radio"> RAJ<br>
+                <input type="radio"> JAR<br>
+                <input type="radio"> ARJ<br>
+                <input type="radio"> AJR</p><br>
+            <p>7. Which of the following was the first poly graphic cipher to be able to operate on more than 3 letters at once?<br>
+                <input type="radio"> autokey cipher<br>
+                <input type="radio"> hill cipher<br>
+                <input type="radio"> one time pad cipher<br>
+                <input type="radio"> playfair cipher</p><br>
+            <p>8. What will be the size of a key matrix if the plain text is “SECRET”?<br>
+                <input type="radio"> 1x6<br>
+                <input type="radio"> 5x1<br>
+                <input type="radio"> 6x1<br>
+                <input type="radio"> 6x6</p><br>
+            <p>9. What will be the plain text corresponding to cipher text “YGQ“ if hill cipher is used with keyword as “GYBNQKURP”?<br>
+                <input type="radio"> SECRET<br>
+                <input type="radio"> WORLD<br>
+                <input type="radio"> DOLLAR<br>
+                <input type="radio"> HELLO</p><br>
+            <p>10. Hill cipher is harder to crack than playfair cipher.<br>
+                <input type="radio"> True<br>
+                <input type="radio"> False
+            </p>
+        </div>
+        <button class="button"><a href="answers.html" >View Answers</a></button>
+  <script>
+    var hamburger = document.querySelector(".hamburger");
+    hamburger.addEventListener("click", function(){
+        document.querySelector("body").classList.toggle("active");
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<title>Virtual lab</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="main.css">
+<style>
+.mySlides {
+    display:none;
+    
+}
+* {
+  box-sizing: border-box;
+}
+
+.column {
+  float: left;
+  padding: 10px;
+  margin-top: 80px;
+}
+
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+</head>
+
+<body style="background: rgb(229,255,167);
+background: linear-gradient(90deg, rgba(229,255,167,1) 0%, rgba(222,246,186,1) 35%);">
+    <ul>
+        <li><a href="simulation.html">Simulation</a></li>
+        <li><a href="aim.html">Lab</a></li>
+        <li><a class="active" href="home.html">Home</a></li>
+    </ul>
+
+<div class="row">
+    <div class="column">
+        <div class="main">
+            <p>Information Assurance and Network Security</p>
+            <p style=" margin-left:250px;">Virtual Lab</p>
+        </div>
+    </div>
+    <div class="column">
+        <div class="w3-content w3-section" style="max-width:500px">
+            <img class="mySlides" src="img/3.png" style="height: 500px; width:700px">
+            <img class="mySlides" src="img/2.jpg" style="height: 500px; width:700px">
+            <img class="mySlides" src="img/4.jpg" style="height: 500px; width:700px">
+          </div>
+    </div>
+  </div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+</body>
+</html>
